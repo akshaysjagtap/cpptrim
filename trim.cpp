@@ -1,3 +1,6 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
 // remove leading and trailing spaces
 	string trim(string &data)
 	{
@@ -20,9 +23,15 @@
 			}
 		}
 		if(start_pos == -1 && end_pos == -1) return "";
-         string d = "";
-         d.resize(end_pos - start_pos + 1);
-         for(int i=start_pos, ind=0 ; i <= end_pos; i++)
-             d[ind++] = data[i];
+	         string d = "";
+        	 d.resize(end_pos - start_pos + 1);
+         	for(int i=start_pos, ind=0 ; i <= end_pos; i++)
+             		d[ind++] = data[i];
 		return d;
+	}
+	int main()
+	{
+		string s = " a b c d ";
+		cout << trim(s) << endl;
+		return 0;
 	}
